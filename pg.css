@@ -1,0 +1,67 @@
+#myGame{
+    height: 480px;
+    width:  640px;
+}
+
+#startScreen{
+    height: 480px;
+    width:  640px;
+    background-image: url("images/start.png");
+    background-repeat: no-repeat;
+    border: 5px solid green;
+    cursor: pointer;
+}
+
+#gameOver{
+    height: 480px;
+    width:  640px;
+    background-color: black;
+    color: red;
+    font-size: 500%;
+    border: 5px solid red;
+    text-align: center;
+}
+
+#win{
+    height: 480px;
+    width:  640px;
+    background-color: black;
+    color: lightgreen;
+    font-size: 500%;
+    border: 5px solid lightgreen;
+    text-align: center;
+}
+
+#container{
+    height: 480px;
+    width:  640px;
+    border: 5px solid green;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+}
+
+body{
+    background-color: black;
+}
+
+#box{
+    width: 441px;
+    height: 156px;
+    border: 2px solid green;
+    top: 0px;
+    z-index: -1;
+}
+
+#player{
+    z-index: -1;
+    border: 2px solid green;
+}
+
+.background{
+    z-index: -3;
+}
+
+.enemy{
+    z-index: -2;
+}
