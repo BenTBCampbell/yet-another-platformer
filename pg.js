@@ -120,7 +120,7 @@ $(function() {
     gf.initialize({baseDiv: $("#myGame")});
 
     var levels = [
-        {tiles: "../Platformer2/levels/level1.json", objects: "levels/level1.js"},
+        {tiles: "/platformer-2/levels/level1.json", objects: "levels/level1.js"},
         {tiles: "levels/level2.json", objects: "levels/level2.js"},
         {tiles: "levels/level3.json", objects: "levels/level3.js"}
     ];
@@ -212,7 +212,7 @@ $(function() {
                 var i = 0;
                 while (i < collisions.length > 0) {
                     var collision = collisions[i];
-                    console.log(collisions[i]);
+                    // console.log(collisions[i]);
                     i++;
                     var collisionBox = {
                         x1: collision.x,
