@@ -203,8 +203,8 @@ $(function() {
             } else {
                 var delta = 30;
                 speed = Math.min(100, Math.max(-100, speed + acceleration * delta / 100.0));
-                var newY = gf.y(this.div) + speed * delta / 100.0;
                 var newX = gf.x(this.div) + horizontalMove;
+                var newY = gf.y(this.div) + speed * delta / 100.0;
                 var newW = gf.w(this.div);
                 var newH = gf.h(this.div);
 
@@ -375,14 +375,10 @@ $(function() {
             x: margin.x - Math.min(Math.max(playerPos.x, margin.x), gf.w(tilemap) - 640 + margin.x),
             y: margin.y - Math.min(Math.max(playerPos.y, margin.y), gf.h(tilemap) - 480 + margin.y)
         };
-        gf.y(group, margin.y);
-//        console.log(group.x);
 
-        if (currentLevel !== 3) {
-            if (playerPos.x > margin.x) {
-                gf.x(group, margin.x - playerPos.x);
-            }
-        }
+        gf.x(group, offset.x)
+        gf.y(group, offset.y)
+
         $("#caveFront").css("background-position", "" + (offset.x * 0.66) + "px 0px");
         $("#caveBack").css("background-position", "" + (offset.x * 0.33) + "px 0px");
         $("#outsideFront").css("background-position", "" + (offset.x * 0.66) + "px 0px");
