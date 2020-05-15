@@ -1,6 +1,9 @@
 #myGame{
     height: 480px;
     width:  640px;
+    transform-origin: top center;
+    margin: auto;
+    border: 5px solid green;
 }
 
 #startScreen{
@@ -8,7 +11,7 @@
     width:  640px;
     background-image: url("images/start.png");
     background-repeat: no-repeat;
-    border: 5px solid green;
+    
     cursor: pointer;
 }
 
@@ -35,7 +38,6 @@
 #container{
     height: 480px;
     width:  640px;
-    border: 5px solid green;
     display: none;
     position: fixed;
     overflow: hidden;

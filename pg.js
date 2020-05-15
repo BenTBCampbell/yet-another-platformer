@@ -120,6 +120,7 @@ var Background = function() {
 
 $(function() {
     gf.initialize({baseDiv: $("#myGame")});
+    gf.autoScaleToWindow($("#myGame"));
 
     var levels = [
         {tiles: "/platformer-2/levels/level1.json", objects: "levels/level1.js"},
