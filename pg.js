@@ -1,3 +1,5 @@
+var STARTING_LEVEL = 0
+
 var enemies = [];
 var slimeAnim = {
     stand: new gf.animation({
@@ -125,7 +127,7 @@ $(function() {
         {tiles: "levels/level3.json", objects: "levels/level3.js"}
     ];
 
-    var currentLevel = 0;
+    var currentLevel = STARTING_LEVEL;
 
     var loadNextLevel = function(group) {
         var level = levels[currentLevel++];
@@ -379,10 +381,12 @@ $(function() {
         gf.x(group, offset.x)
         gf.y(group, offset.y)
 
-        $("#caveFront").css("background-position", "" + (offset.x * 0.66) + "px 0px");
-        $("#caveBack").css("background-position", "" + (offset.x * 0.33) + "px 0px");
-        $("#outsideFront").css("background-position", "" + (offset.x * 0.66) + "px 0px");
-        $("#outsideBack").css("background-position", "" + (offset.x * 0.33) + "px 0px");
+        frontScrollSpeed = 1 - 0.3;
+        backScrollSpeed = 1 - 0.1;
+        $("#caveFront").css("background-position", "" + (-1 * offset.x * frontScrollSpeed) + "px 0px");
+        $("#caveBack").css("background-position", "" + (-1 * offset.x * backScrollSpeed) + "px 0px");
+        $("#outsideFront").css("background-position", "" + (-1 * offset.x * frontScrollSpeed) + "px 0px");
+        $("#outsideBack").css("background-position", "" + (-1 * offset.x * backScrollSpeed) + "px 0px");
     };
     gf.addCallback(gameLoop, 30);
 
